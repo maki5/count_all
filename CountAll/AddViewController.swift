@@ -36,7 +36,7 @@ class AddViewController: UIViewController {
         do {
             try context.save()
             navigationController?.popViewController(animated: true)
-            
+            print("bfhjdbfhd")
         } catch let error {
             NSLog(error.localizedDescription)
         }

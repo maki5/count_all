@@ -11,11 +11,15 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var table: UITableView!
     private var countedObjects = [CountedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         populateCountObjects()
     }
     
@@ -53,6 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CountedObject")
         do {
             countedObjects = try context.fetch(fetchRequest) as! [CountedObject]
+            table.reloadData()
             
         } catch let error{
             NSLog(error.localizedDescription)
