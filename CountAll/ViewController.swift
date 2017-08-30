@@ -35,9 +35,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = countedObjects[indexPath.row].name
+        let countedObject = countedObjects[indexPath.row]
         
+        let activities = countedObject.activities?.allObjects as! [Activity]
+        
+        var count = 0
+        for activity in activities {
+            count += Int(activity.amount)
+        }
+
+        let cell: TableViewCell = self.table.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
+        
+        guard let name = countedObject.name
+            else {
+                return cell
+        }
+        
+
+        cell.name?.text = name
+        cell.count?.text = String(count)
+        cell.tag = indexPath.row
+        
+        
+
         return cell
     }
     
@@ -46,7 +66,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "addAmountSegue" {
+            
+            if let button = sender as? UIButton {
+                let cell = button.superview?.superview as! UITableViewCell
+                let tag = cell.tag
+                
+                let vc = segue.destination as! AddAmountViewController
+//                vc.countedObject = countedObjects[tag]
+                vc.ll = "dbhjsbhdj"
+            }
+        }
     }
     
     
@@ -55,6 +85,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CountedObject")
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CountedObject")
+        request.returnsObjectsAsFaults = true
+        request.relationshipKeyPathsForPrefetching = ["activities"]
+        
         do {
             countedObjects = try context.fetch(fetchRequest) as! [CountedObject]
             table.reloadData()

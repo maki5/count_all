@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */; };
+		2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B9291F56D5E800060816 /* CountedObject.swift */; };
+		2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B92D1F56EFF500060816 /* AddAmountViewController.swift */; };
 		20D45C551F558F05004E3486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C541F558F05004E3486 /* AppDelegate.swift */; };
 		20D45C571F558F05004E3486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C561F558F05004E3486 /* ViewController.swift */; };
 		20D45C5A1F558F05004E3486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D45C581F558F05004E3486 /* Main.storyboard */; };
-		20D45C5D1F558F05004E3486 /* CountAll.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C5B1F558F05004E3486 /* CountAll.xcdatamodeld */; };
 		20D45C5F1F558F05004E3486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D45C5E1F558F05004E3486 /* Assets.xcassets */; };
 		20D45C621F558F05004E3486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D45C601F558F05004E3486 /* LaunchScreen.storyboard */; };
 		20D45C6E1F559FB2004E3486 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C6D1F559FB2004E3486 /* AddViewController.swift */; };
+		20D45C701F55CFBD004E3486 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C6F1F55CFBD004E3486 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20D45C511F558F05004E3486 /* CountAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		2087B9291F56D5E800060816 /* CountedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedObject.swift; sourceTree = "<group>"; };
+		2087B92D1F56EFF500060816 /* AddAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAmountViewController.swift; sourceTree = "<group>"; };
+		20D45C511F558F05004E3486 /* CountIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D45C541F558F05004E3486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D45C561F558F05004E3486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20D45C591F558F05004E3486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		20D45C5C1F558F05004E3486 /* CountAll.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountAll.xcdatamodel; sourceTree = "<group>"; };
 		20D45C5E1F558F05004E3486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20D45C611F558F05004E3486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20D45C631F558F05004E3486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D45C6D1F559FB2004E3486 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		20D45C6F1F55CFBD004E3486 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +48,7 @@
 		20D45C481F558F05004E3486 = {
 			isa = PBXGroup;
 			children = (
-				20D45C531F558F05004E3486 /* CountAll */,
+				20D45C531F558F05004E3486 /* CountIt */,
 				20D45C521F558F05004E3486 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +56,12 @@
 		20D45C521F558F05004E3486 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20D45C511F558F05004E3486 /* CountAll.app */,
+				20D45C511F558F05004E3486 /* CountIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20D45C531F558F05004E3486 /* CountAll */ = {
+		20D45C531F558F05004E3486 /* CountIt */ = {
 			isa = PBXGroup;
 			children = (
 				20D45C541F558F05004E3486 /* AppDelegate.swift */,
@@ -64,18 +70,22 @@
 				20D45C5E1F558F05004E3486 /* Assets.xcassets */,
 				20D45C601F558F05004E3486 /* LaunchScreen.storyboard */,
 				20D45C631F558F05004E3486 /* Info.plist */,
-				20D45C5B1F558F05004E3486 /* CountAll.xcdatamodeld */,
 				20D45C6D1F559FB2004E3486 /* AddViewController.swift */,
+				2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */,
+				20D45C6F1F55CFBD004E3486 /* TableViewCell.swift */,
+				2087B9291F56D5E800060816 /* CountedObject.swift */,
+				2087B92D1F56EFF500060816 /* AddAmountViewController.swift */,
 			);
+			name = CountIt;
 			path = CountAll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20D45C501F558F05004E3486 /* CountAll */ = {
+		20D45C501F558F05004E3486 /* CountIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20D45C661F558F05004E3486 /* Build configuration list for PBXNativeTarget "CountAll" */;
+			buildConfigurationList = 20D45C661F558F05004E3486 /* Build configuration list for PBXNativeTarget "CountIt" */;
 			buildPhases = (
 				20D45C4D1F558F05004E3486 /* Sources */,
 				20D45C4E1F558F05004E3486 /* Frameworks */,
@@ -85,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = CountAll;
+			name = CountIt;
 			productName = CountAll;
-			productReference = 20D45C511F558F05004E3486 /* CountAll.app */;
+			productReference = 20D45C511F558F05004E3486 /* CountIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20D45C4C1F558F05004E3486 /* Build configuration list for PBXProject "CountAll" */;
+			buildConfigurationList = 20D45C4C1F558F05004E3486 /* Build configuration list for PBXProject "CountIt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20D45C501F558F05004E3486 /* CountAll */,
+				20D45C501F558F05004E3486 /* CountIt */,
 			);
 		};
 /* End PBXProject section */
@@ -143,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D45C701F55CFBD004E3486 /* TableViewCell.swift in Sources */,
+				2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */,
+				2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */,
+				2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */,
 				20D45C571F558F05004E3486 /* ViewController.swift in Sources */,
-				20D45C5D1F558F05004E3486 /* CountAll.xcdatamodeld in Sources */,
 				20D45C6E1F559FB2004E3486 /* AddViewController.swift in Sources */,
 				20D45C551F558F05004E3486 /* AppDelegate.swift in Sources */,
 			);
@@ -272,7 +285,7 @@
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
 				INFOPLIST_FILE = CountAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountAll";
+				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -285,7 +298,7 @@
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
 				INFOPLIST_FILE = CountAll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountAll";
+				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -294,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20D45C4C1F558F05004E3486 /* Build configuration list for PBXProject "CountAll" */ = {
+		20D45C4C1F558F05004E3486 /* Build configuration list for PBXProject "CountIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20D45C641F558F05004E3486 /* Debug */,
@@ -303,24 +316,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20D45C661F558F05004E3486 /* Build configuration list for PBXNativeTarget "CountAll" */ = {
+		20D45C661F558F05004E3486 /* Build configuration list for PBXNativeTarget "CountIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20D45C671F558F05004E3486 /* Debug */,
 				20D45C681F558F05004E3486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		20D45C5B1F558F05004E3486 /* CountAll.xcdatamodeld */ = {
+		2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				20D45C5C1F558F05004E3486 /* CountAll.xcdatamodel */,
+				2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 20D45C5C1F558F05004E3486 /* CountAll.xcdatamodel */;
-			path = CountAll.xcdatamodeld;
+			currentVersion = 2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

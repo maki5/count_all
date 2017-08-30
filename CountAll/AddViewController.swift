@@ -29,14 +29,16 @@ class AddViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        
         let countedObj = CountedObject(context: context)
         countedObj.name = objectName.text
+        let activity = Activity(context: context)
+        activity.created_at = Date() as NSDate
+        activity.amount = 1
+        countedObj.addToActivities(activity)
         
         do {
             try context.save()
             navigationController?.popViewController(animated: true)
-            print("bfhjdbfhd")
         } catch let error {
             NSLog(error.localizedDescription)
         }
