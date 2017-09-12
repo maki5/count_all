@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellDelegate {
 
     @IBOutlet var table: UITableView!
     private var countedObjects = [CountedObject]()
@@ -26,6 +26,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func didCloseModal() {
+        populateCountObjects()
+    }
+    
+    func decreaseButtonTapped(cell: TableViewCell) {
+        let cellTag = cell.tag
+        let countedObject = countedObjects[cellTag]
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let activity = Activity(context: context)
+        activity.created_at = Date() as NSDate
+        activity.amount = -1
+        countedObject.addToActivities(activity)
+                
+        do {
+            try context.save()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
+        
         populateCountObjects()
     }
     
@@ -61,6 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.name?.text = name
         cell.count?.text = String(count)
         cell.tag = indexPath.row
+        cell.delegate = self
     
         return cell
     }

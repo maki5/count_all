@@ -123,11 +123,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSk-as-4wy">
+                                                    <rect key="frame" x="247" y="-9" width="46" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="decreaseAmount:" destination="K0q-R6-cCD" eventType="touchUpInside" id="bmq-Qc-5lG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="OSk-as-4wy" firstAttribute="leading" secondItem="bbZ-tX-X9j" secondAttribute="trailing" constant="17" id="2I7-QE-QbH"/>
                                                 <constraint firstItem="sur-Jk-C1t" firstAttribute="trailing" secondItem="NzP-Vg-Kdm" secondAttribute="trailingMargin" id="6Pi-0Y-fII"/>
                                                 <constraint firstItem="G1h-pU-DiT" firstAttribute="centerY" secondItem="sur-Jk-C1t" secondAttribute="centerY" constant="2" id="8Kn-9H-IpU"/>
                                                 <constraint firstItem="bbZ-tX-X9j" firstAttribute="leading" secondItem="NzP-Vg-Kdm" secondAttribute="leadingMargin" id="8OU-aS-Gw1"/>
+                                                <constraint firstItem="OSk-as-4wy" firstAttribute="centerY" secondItem="NzP-Vg-Kdm" secondAttribute="centerY" id="DmX-8x-h7s"/>
+                                                <constraint firstItem="G1h-pU-DiT" firstAttribute="leading" secondItem="OSk-as-4wy" secondAttribute="trailing" constant="-10" id="LYn-yT-3fS"/>
                                                 <constraint firstItem="bbZ-tX-X9j" firstAttribute="top" secondItem="NzP-Vg-Kdm" secondAttribute="topMargin" id="Ww5-rh-mEg"/>
                                                 <constraint firstItem="sur-Jk-C1t" firstAttribute="leading" secondItem="G1h-pU-DiT" secondAttribute="trailing" constant="-4" id="bbc-eO-bzm"/>
                                                 <constraint firstItem="bbZ-tX-X9j" firstAttribute="top" secondItem="G1h-pU-DiT" secondAttribute="top" constant="-2" id="j66-JY-4cV"/>
