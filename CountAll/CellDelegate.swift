@@ -10,4 +10,8 @@ import Foundation
 
 protocol CellDelegate {
     func decreaseButtonTapped(cell: TableViewCell)
+    
+    func increaseButtonTappedLP(cell: TableViewCell)
+    
+    func increaseButtonTapped(cell: TableViewCell)
 }

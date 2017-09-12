@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         populateCountObjects()
     }
     
+    
     func didCloseModal() {
         populateCountObjects()
     }
@@ -40,6 +41,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         activity.amount = -1
         countedObject.addToActivities(activity)
                 
+        do {
+            try context.save()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
+        
+        populateCountObjects()
+    }
+    
+    func increaseButtonTappedLP(cell: TableViewCell) {
+        performSegue(withIdentifier: "addAmountSegue", sender: cell)
+    }
+    
+    func increaseButtonTapped(cell: TableViewCell) {
+        let cellTag = cell.tag
+        let countedObject = countedObjects[cellTag]
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let activity = Activity(context: context)
+        activity.created_at = Date() as NSDate
+        activity.amount = 1
+        countedObject.addToActivities(activity)
+        
         do {
             try context.save()
         } catch let error {
@@ -111,15 +136,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addAmountSegue" {
             
-            if let button = sender as? UIButton {
-                let cell = button.superview?.superview as! UITableViewCell
-                
+            let cell = sender as! UITableViewCell
                 let vc = segue.destination as! AddAmountViewController
                 vc.tag = cell.tag
-            }
         }
     }
-    
     
     
     private func populateCountObjects() {

@@ -22,6 +22,16 @@ class AddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func endEditingTextField(_ sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let dismissTextField = UITapGestureRecognizer(target: self, action: #selector(endEditingTextField(_:)))
+        dismissTextField.numberOfTapsRequired = 1
+        view.addGestureRecognizer(dismissTextField)
+    }
+    
    
     
     @IBOutlet var objectName: UITextField!
