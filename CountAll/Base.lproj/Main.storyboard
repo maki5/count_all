@@ -36,10 +36,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-VN-1sX">
-                                <rect key="frame" x="166" y="267" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-VN-1sX">
+                                <rect key="frame" x="70" y="267" width="235" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,7 +47,17 @@
                                 <rect key="frame" x="164" y="406" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="closeModal:" destination="NBJ-fi-8JN" eventType="touchUpInside" id="YCV-xJ-Ewa"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iLp-e7-NeK">
+                                <rect key="frame" x="139" y="340" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.29938998287671231" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,6 +66,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amount" destination="iLp-e7-NeK" id="29u-0X-d70"/>
                         <outlet property="label" destination="QCp-VN-1sX" id="rGc-vn-FII"/>
                     </connections>
                 </viewController>
@@ -100,7 +111,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                     <state key="normal" title="+"/>
                                                     <connections>
-                                                        <segue destination="NBJ-fi-8JN" kind="presentation" id="Hth-xw-hoO"/>
+                                                        <segue destination="NBJ-fi-8JN" kind="presentation" identifier="addAmountSegue" id="Hth-xw-hoO"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-pU-DiT">
@@ -218,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afu-rH-JlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="711.99400299850083"/>
+            <point key="canvasLocation" x="1372" y="805"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="See-af-0X4">
@@ -236,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stj-lr-mpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637.5999999999999" y="29.23538230884558"/>
+            <point key="canvasLocation" x="1862" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="alv-eh-lDd">

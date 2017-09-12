@@ -31,10 +31,6 @@ class AddViewController: UIViewController {
         
         let countedObj = CountedObject(context: context)
         countedObj.name = objectName.text
-        let activity = Activity(context: context)
-        activity.created_at = Date() as NSDate
-        activity.amount = 1
-        countedObj.addToActivities(activity)
         
         do {
             try context.save()

@@ -26,11 +26,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var count: UILabel?
     
     
-    @IBAction func addAmount(_ sender: Any) {
-        
-    }
-    
-    
     
     
 }

@@ -7,13 +7,41 @@
 //
 
 import UIKit
+import CoreData
 
 class AddAmountViewController: UIViewController {
 
+    var tag = Int()
+    var countedObjects = [CountedObject]()
+    var countedObject: CountedObject? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CountedObject")
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CountedObject")
+        request.returnsObjectsAsFaults = true
+        request.relationshipKeyPathsForPrefetching = ["activities"]
+        
+        do {
+            countedObjects = try context.fetch(fetchRequest) as! [CountedObject]
+            
+        } catch let error{
+            NSLog(error.localizedDescription)
+        }
+        
+        countedObject = countedObjects[tag]
+        if let name = countedObject?.name {
+            label.text = "Add the amount of \(name)"
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +49,34 @@ class AddAmountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        label.text = ll
-    }
     
     @IBOutlet var label: UILabel!
-//    var countedObject = CountedObject()
-    var ll = String()
+    @IBOutlet var amount: UITextField!
+    @IBAction func closeModal(_ sender: Any) {
+        
+        if let amountVal = amount.text {
+            if let amountInt = Int16(amountVal) {
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let activity = Activity(context: context)
+                activity.created_at = Date() as NSDate
+                activity.amount = amountInt
+                
+                countedObject?.addToActivities(activity)
+                
+                do {
+                    try context.save()
+                    navigationController?.popViewController(animated: true)
+                } catch let error {
+                    NSLog(error.localizedDescription)
+                }
+            }
+        }
+        
+        
+        dismiss(animated: true, completion: nil)
+        ViewController.sharedInstace?.didCloseModal()
+    }
+    
 
     /*
     // MARK: - Navigation

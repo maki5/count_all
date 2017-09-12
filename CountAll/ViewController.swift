@@ -13,13 +13,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet var table: UITableView!
     private var countedObjects = [CountedObject]()
+    static var sharedInstace : ViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ViewController.sharedInstace = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        populateCountObjects()
+    }
+    
+    func didCloseModal() {
+        print("modal")
         populateCountObjects()
     }
     
@@ -70,11 +78,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let button = sender as? UIButton {
                 let cell = button.superview?.superview as! UITableViewCell
-                let tag = cell.tag
                 
                 let vc = segue.destination as! AddAmountViewController
-//                vc.countedObject = countedObjects[tag]
-                vc.ll = "dbhjsbhdj"
+                vc.tag = cell.tag
             }
         }
     }
