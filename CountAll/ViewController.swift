@@ -22,12 +22,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         populateCountObjects()
     }
     
     func didCloseModal() {
-        print("modal")
         populateCountObjects()
     }
     
@@ -63,14 +61,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.name?.text = name
         cell.count?.text = String(count)
         cell.tag = indexPath.row
-        
-        
-
+    
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete)
+        {
+            let objToDelete = countedObjects[indexPath.row]
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            context.delete(objToDelete as NSManagedObject)
+            do {
+                try context.save()
+                populateCountObjects()
+            } catch {
+                NSLog(error.localizedDescription)
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailsViewSegue", sender: self)
+//        performSegue(withIdentifier: "detailsViewSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
