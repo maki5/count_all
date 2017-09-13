@@ -184,7 +184,7 @@
                     <navigationItem key="navigationItem" id="ZPl-Th-sLN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dJk-tR-f0y">
                             <connections>
-                                <segue destination="hvD-Lp-KmK" kind="show" id="Yw9-Ft-2Ml"/>
+                                <segue destination="hvD-Lp-KmK" kind="show" identifier="addObjectSegue" id="Yw9-Ft-2Ml"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -19,6 +19,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         ViewController.sharedInstace = self
+        populateCountObjects()
+        
+        if countedObjects.count == 0 {
+           performSegue(withIdentifier: "addObjectSegue", sender: self)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -135,10 +141,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addAmountSegue" {
-            
             let cell = sender as! UITableViewCell
-                let vc = segue.destination as! AddAmountViewController
-                vc.tag = cell.tag
+            let vc = segue.destination as! AddAmountViewController
+            vc.tag = cell.tag
+            
         }
     }
     
