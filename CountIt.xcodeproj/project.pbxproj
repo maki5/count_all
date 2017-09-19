@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20014A6B1F712697001438E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 20014A6A1F712697001438E6 /* Podfile */; };
 		2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */; };
 		2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B9291F56D5E800060816 /* CountedObject.swift */; };
 		2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B92D1F56EFF500060816 /* AddAmountViewController.swift */; };
 		2087B9321F682DD500060816 /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B9311F682DD500060816 /* CellDelegate.swift */; };
+		2087B9341F69259500060816 /* count_it_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2087B9331F69259500060816 /* count_it_icon.jpg */; };
+		2087B9381F6959A400060816 /* Count_Screen_2-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2087B9371F6959A400060816 /* Count_Screen_2-2.png */; };
 		20D45C551F558F05004E3486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C541F558F05004E3486 /* AppDelegate.swift */; };
 		20D45C571F558F05004E3486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C561F558F05004E3486 /* ViewController.swift */; };
 		20D45C5A1F558F05004E3486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D45C581F558F05004E3486 /* Main.storyboard */; };
@@ -21,10 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20014A6A1F712697001438E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2087B9291F56D5E800060816 /* CountedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedObject.swift; sourceTree = "<group>"; };
 		2087B92D1F56EFF500060816 /* AddAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAmountViewController.swift; sourceTree = "<group>"; };
 		2087B9311F682DD500060816 /* CellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
+		2087B9331F69259500060816 /* count_it_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = count_it_icon.jpg; path = ../../../../Downloads/count_it_icon.jpg; sourceTree = "<group>"; };
+		2087B9371F6959A400060816 /* Count_Screen_2-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Count_Screen_2-2.png"; path = "../../../../Downloads/Count_Screen_2-2.png"; sourceTree = "<group>"; };
 		20D45C511F558F05004E3486 /* CountIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D45C541F558F05004E3486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D45C561F558F05004E3486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +72,13 @@
 		20D45C531F558F05004E3486 /* CountIt */ = {
 			isa = PBXGroup;
 			children = (
+				20014A6A1F712697001438E6 /* Podfile */,
 				20D45C541F558F05004E3486 /* AppDelegate.swift */,
 				20D45C561F558F05004E3486 /* ViewController.swift */,
 				20D45C581F558F05004E3486 /* Main.storyboard */,
 				20D45C5E1F558F05004E3486 /* Assets.xcassets */,
+				2087B9371F6959A400060816 /* Count_Screen_2-2.png */,
+				2087B9331F69259500060816 /* count_it_icon.jpg */,
 				20D45C601F558F05004E3486 /* LaunchScreen.storyboard */,
 				20D45C631F558F05004E3486 /* Info.plist */,
 				20D45C6D1F559FB2004E3486 /* AddViewController.swift */,
@@ -143,8 +152,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20014A6B1F712697001438E6 /* Podfile in Resources */,
 				20D45C621F558F05004E3486 /* LaunchScreen.storyboard in Resources */,
+				2087B9341F69259500060816 /* count_it_icon.jpg in Resources */,
 				20D45C5F1F558F05004E3486 /* Assets.xcassets in Resources */,
+				2087B9381F6959A400060816 /* Count_Screen_2-2.png in Resources */,
 				20D45C5A1F558F05004E3486 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +297,10 @@
 		20D45C671F558F05004E3486 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
 				INFOPLIST_FILE = CountAll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,9 +311,10 @@
 		20D45C681F558F05004E3486 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
 				INFOPLIST_FILE = CountAll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm-apps.CountIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
