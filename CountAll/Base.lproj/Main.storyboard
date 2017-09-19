@@ -164,7 +164,7 @@
                                         <connections>
                                             <outlet property="count" destination="G1h-pU-DiT" id="ueX-uT-aX9"/>
                                             <outlet property="name" destination="bbZ-tX-X9j" id="Wqh-gd-rwq"/>
-                                            <segue destination="kfP-Sv-NMh" kind="show" id="WhE-90-E2Z"/>
+                                            <segue destination="kfP-Sv-NMh" kind="show" identifier="chartSegue" id="WhE-90-E2Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

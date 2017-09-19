@@ -10,6 +10,7 @@
 		20014A6B1F712697001438E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 20014A6A1F712697001438E6 /* Podfile */; };
 		20014A6D1F712BB1001438E6 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20014A6C1F712BB1001438E6 /* ChartViewController.swift */; };
 		20014A731F712C18001438E6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20014A721F712C18001438E6 /* Charts.framework */; };
+		20014A751F71332D001438E6 /* ChartDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20014A741F71332D001438E6 /* ChartDataGenerator.swift */; };
 		2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */; };
 		2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B9291F56D5E800060816 /* CountedObject.swift */; };
 		2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B92D1F56EFF500060816 /* AddAmountViewController.swift */; };
@@ -43,6 +44,7 @@
 		20014A6A1F712697001438E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		20014A6C1F712BB1001438E6 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		20014A721F712C18001438E6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/CountIt-cudeomujbddcieereajgtuuurhnh/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<group>"; };
+		20014A741F71332D001438E6 /* ChartDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataGenerator.swift; sourceTree = "<group>"; };
 		2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2087B9291F56D5E800060816 /* CountedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedObject.swift; sourceTree = "<group>"; };
 		2087B92D1F56EFF500060816 /* AddAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAmountViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				2087B92D1F56EFF500060816 /* AddAmountViewController.swift */,
 				2087B9311F682DD500060816 /* CellDelegate.swift */,
 				20014A6C1F712BB1001438E6 /* ChartViewController.swift */,
+				20014A741F71332D001438E6 /* ChartDataGenerator.swift */,
 			);
 			name = CountIt;
 			path = CountAll;
@@ -274,6 +277,7 @@
 				20D45C701F55CFBD004E3486 /* TableViewCell.swift in Sources */,
 				2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */,
 				2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */,
+				20014A751F71332D001438E6 /* ChartDataGenerator.swift in Sources */,
 				2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */,
 				20014A6D1F712BB1001438E6 /* ChartViewController.swift in Sources */,
 				20D45C571F558F05004E3486 /* ViewController.swift in Sources */,

@@ -144,7 +144,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell = sender as! UITableViewCell
             let vc = segue.destination as! AddAmountViewController
             vc.tag = cell.tag
-            
+        } else if segue.identifier == "chartSegue" {
+            let cell = sender as! UITableViewCell
+            let vc = segue.destination as! ChartViewController
+            vc.recordIndex = cell.tag
         }
     }
     
