@@ -111,13 +111,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-tX-X9j">
-                                                    <rect key="frame" x="8" y="8" width="167" height="23"/>
+                                                    <rect key="frame" x="8" y="8" width="222" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sur-Jk-C1t">
-                                                    <rect key="frame" x="266" y="7" width="46" height="26"/>
+                                                    <rect key="frame" x="321" y="7" width="46" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="GF8-Hm-7Yc"/>
                                                     </constraints>
@@ -128,7 +128,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-pU-DiT">
-                                                    <rect key="frame" x="228" y="10" width="42" height="23"/>
+                                                    <rect key="frame" x="283" y="10" width="42" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="5TS-y1-DKE"/>
                                                     </constraints>
@@ -137,7 +137,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSk-as-4wy">
-                                                    <rect key="frame" x="192" y="-9" width="46" height="60"/>
+                                                    <rect key="frame" x="247" y="-9" width="46" height="60"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                     <state key="normal" title="-"/>
                                                     <connections>
@@ -164,6 +164,7 @@
                                         <connections>
                                             <outlet property="count" destination="G1h-pU-DiT" id="ueX-uT-aX9"/>
                                             <outlet property="name" destination="bbZ-tX-X9j" id="Wqh-gd-rwq"/>
+                                            <segue destination="kfP-Sv-NMh" kind="show" id="WhE-90-E2Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -196,6 +197,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="36.431784107946029"/>
+        </scene>
+        <!--ChartViewController-->
+        <scene sceneID="hvr-mA-yqu">
+            <objects>
+                <viewController title="ChartViewController" id="kfP-Sv-NMh" customClass="ChartViewController" customModule="CountIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dp6-Rz-4si"/>
+                        <viewControllerLayoutGuide type="bottom" id="PFK-4R-XAg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XqG-XK-umb" customClass="BarChartView" customModule="Charts">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="XqG-XK-umb" id="a3c-9r-uTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byk-cm-Vx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749" y="-271"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="9wM-pp-bvx">

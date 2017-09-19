@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20014A6B1F712697001438E6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 20014A6A1F712697001438E6 /* Podfile */; };
+		20014A6D1F712BB1001438E6 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20014A6C1F712BB1001438E6 /* ChartViewController.swift */; };
+		20014A731F712C18001438E6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20014A721F712C18001438E6 /* Charts.framework */; };
 		2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2087B91E1F55EA8600060816 /* DataModel.xcdatamodeld */; };
 		2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B9291F56D5E800060816 /* CountedObject.swift */; };
 		2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2087B92D1F56EFF500060816 /* AddAmountViewController.swift */; };
@@ -21,10 +23,26 @@
 		20D45C621F558F05004E3486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D45C601F558F05004E3486 /* LaunchScreen.storyboard */; };
 		20D45C6E1F559FB2004E3486 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C6D1F559FB2004E3486 /* AddViewController.swift */; };
 		20D45C701F55CFBD004E3486 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C6F1F55CFBD004E3486 /* TableViewCell.swift */; };
+		309D08845E46D1E077346FC6 /* Pods_CountIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926485FA3383FDBE8013761C /* Pods_CountIt.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20014A711F712BE6001438E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20014A6A1F712697001438E6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		20014A6C1F712BB1001438E6 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		20014A721F712C18001438E6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../Library/Developer/Xcode/DerivedData/CountIt-cudeomujbddcieereajgtuuurhnh/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<group>"; };
 		2087B91F1F55EA8600060816 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		2087B9291F56D5E800060816 /* CountedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedObject.swift; sourceTree = "<group>"; };
 		2087B92D1F56EFF500060816 /* AddAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAmountViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +58,9 @@
 		20D45C631F558F05004E3486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20D45C6D1F559FB2004E3486 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		20D45C6F1F55CFBD004E3486 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		870ED6777EDB777CDCE889EA /* Pods-CountIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountIt/Pods-CountIt.debug.xcconfig"; sourceTree = "<group>"; };
+		926485FA3383FDBE8013761C /* Pods_CountIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFBE3EB905F5FBBB058AA76 /* Pods-CountIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-CountIt/Pods-CountIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20014A731F712C18001438E6 /* Charts.framework in Frameworks */,
+				309D08845E46D1E077346FC6 /* Pods_CountIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +81,8 @@
 			children = (
 				20D45C531F558F05004E3486 /* CountIt */,
 				20D45C521F558F05004E3486 /* Products */,
+				E0E412DA15DBB5F461FF35CC /* Pods */,
+				39D79E3DDCA665F3BD5663AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,9 +112,28 @@
 				2087B9291F56D5E800060816 /* CountedObject.swift */,
 				2087B92D1F56EFF500060816 /* AddAmountViewController.swift */,
 				2087B9311F682DD500060816 /* CellDelegate.swift */,
+				20014A6C1F712BB1001438E6 /* ChartViewController.swift */,
 			);
 			name = CountIt;
 			path = CountAll;
+			sourceTree = "<group>";
+		};
+		39D79E3DDCA665F3BD5663AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20014A721F712C18001438E6 /* Charts.framework */,
+				926485FA3383FDBE8013761C /* Pods_CountIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0E412DA15DBB5F461FF35CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				870ED6777EDB777CDCE889EA /* Pods-CountIt.debug.xcconfig */,
+				AFFBE3EB905F5FBBB058AA76 /* Pods-CountIt.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +143,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20D45C661F558F05004E3486 /* Build configuration list for PBXNativeTarget "CountIt" */;
 			buildPhases = (
+				6663A4C056C6DF56758DDD5E /* [CP] Check Pods Manifest.lock */,
 				20D45C4D1F558F05004E3486 /* Sources */,
 				20D45C4E1F558F05004E3486 /* Frameworks */,
 				20D45C4F1F558F05004E3486 /* Resources */,
+				90E9E7322C42FF859DCFC58F /* [CP] Embed Pods Frameworks */,
+				3C35A4E9E519419510FFCDE8 /* [CP] Copy Pods Resources */,
+				20014A711F712BE6001438E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +211,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C35A4E9E519419510FFCDE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountIt/Pods-CountIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6663A4C056C6DF56758DDD5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CountIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E9E7322C42FF859DCFC58F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CountIt/Pods-CountIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CountIt/Pods-CountIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20D45C4D1F558F05004E3486 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -173,6 +275,7 @@
 				2087B92A1F56D5E800060816 /* CountedObject.swift in Sources */,
 				2087B9201F55EA8600060816 /* DataModel.xcdatamodeld in Sources */,
 				2087B92E1F56EFF500060816 /* AddAmountViewController.swift in Sources */,
+				20014A6D1F712BB1001438E6 /* ChartViewController.swift in Sources */,
 				20D45C571F558F05004E3486 /* ViewController.swift in Sources */,
 				20D45C6E1F559FB2004E3486 /* AddViewController.swift in Sources */,
 				20D45C551F558F05004E3486 /* AppDelegate.swift in Sources */,
@@ -296,6 +399,7 @@
 		};
 		20D45C671F558F05004E3486 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870ED6777EDB777CDCE889EA /* Pods-CountIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
@@ -310,6 +414,7 @@
 		};
 		20D45C681F558F05004E3486 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFFBE3EB905F5FBBB058AA76 /* Pods-CountIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 2W8EHH82G8;
