@@ -40,20 +40,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cellTag = cell.tag
         let countedObject = countedObjects[cellTag]
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let activities = countedObject.activities?.allObjects as! [Activity]
         
-        let activity = Activity(context: context)
-        activity.created_at = Date() as NSDate
-        activity.amount = -1
-        countedObject.addToActivities(activity)
-                
-        do {
-            try context.save()
-        } catch let error {
-            NSLog(error.localizedDescription)
+        var count = 0
+        for activity in activities {
+            count += Int(activity.amount)
         }
         
-        populateCountObjects()
+        if count > 0 {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let activity = Activity(context: context)
+            activity.created_at = Date() as NSDate
+            activity.amount = -1
+            countedObject.addToActivities(activity)
+            
+            do {
+                try context.save()
+            } catch let error {
+                NSLog(error.localizedDescription)
+            }
+            
+            populateCountObjects()
+        }
+        
     }
     
     func increaseButtonTappedLP(cell: TableViewCell) {
@@ -148,6 +158,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell = sender as! UITableViewCell
             let vc = segue.destination as! ChartViewController
             vc.recordIndex = cell.tag
+            vc.vcTitle = countedObjects[cell.tag].name!
         }
     }
     
